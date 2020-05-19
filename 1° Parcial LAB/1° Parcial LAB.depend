@@ -8,13 +8,13 @@
 	<string.h>
 	"Gets.h"
 
-1589893912 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\main.c
+1589899537 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Gets.h"
 	"Clientes_Mascotas.h"
 
-1589891238 c:\users\fede\desktop\1° parcial lab\1° parcial lab\clientes_mascotas.h
+1589897437 c:\users\fede\desktop\1° parcial lab\1° parcial lab\clientes_mascotas.h
 	"Clientes.h"
 	"Mascotas.h"
 
@@ -25,7 +25,7 @@
 	"Raza.h"
 	"Gets.h"
 
-1589893901 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\clientes_mascotas.c
+1589899438 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\clientes_mascotas.c
 	"Clientes_Mascotas.h"
 	"Gets.h"
 
@@ -55,7 +55,7 @@
 1589842536 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\validates.c
 	"Validates.h"
 
-1589893815 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\raza.c
+1589894105 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\raza.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

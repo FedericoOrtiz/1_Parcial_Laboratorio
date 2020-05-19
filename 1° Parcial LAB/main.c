@@ -43,7 +43,8 @@ int main()
         printf("16. Mostrar PROMEDIO DE EDAD ENTRE MASCOTAS\n");
         printf("17. Mostrar PROMEDIO DE EDAD ENTRE MASCOTAS POR TIPO\n");
         printf("18. Mostrar PORCENTAJE DE MUJERES SOBRE MIS CLIENTES\n");
-        printf("19. Salir\n\n");
+        //printf("19. Mostrar DUENIOS CON MASCOTAS DEL MISMO SEXO\n");
+        printf("20. Salir\n\n");
         opcion = getInt("Ingrese una opcion: ", "Error, ingrese una opcion: ", 2);
         system("cls");
 
@@ -105,7 +106,10 @@ int main()
             case 18:
                 porcentajeMujeres(listaClientes, TAM_C);
                 break;
-            case 19:
+            /*case 19:
+                mostrarClientesConMascotasMismoSexo(listaClientes, TAM_C, listaMascotas, TAM_M);
+                break;*/
+            case 20:
                 printf("Saliendo\n\n");
                 break;
             default:
@@ -114,7 +118,7 @@ int main()
         }
         system("pause");
         system("cls");
-    }while(opcion !=19);
+    }while(opcion !=20);
 
 
     return 0;

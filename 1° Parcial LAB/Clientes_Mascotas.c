@@ -240,6 +240,7 @@ void modificarMascotas(eMascota listaMascotas[], int tamMascotas, eCliente lista
     mostrarMascotas(listaMascotas, tamMascotas, listaClientes, tamClientes);
 
     int flag = 1;
+    int flag2 = 1;
 
     while(flag)
     {
@@ -259,7 +260,8 @@ void modificarMascotas(eMascota listaMascotas[], int tamMascotas, eCliente lista
                     printf("4. Edad\n");
                     printf("5. Peso\n");
                     printf("6. Sexo\n");
-                    printf("7. Volver al Menu\n\n");
+                    printf("7. Duenio\n");
+                    printf("8. Volver al Menu\n\n");
                     option = getInt("Ingrese una opcion: ", "Error, ingrese una opcion: ", 2);
                     system("cls");
 
@@ -291,13 +293,47 @@ void modificarMascotas(eMascota listaMascotas[], int tamMascotas, eCliente lista
                         }while(listaMascotas[i].sexo != 'M' && listaMascotas[i].sexo != 'F');
                         break;
                     case 7:
+                        printf("                      ***** LISTADO DE DUENIOS *****\n\n");
+                        printf("   ID          Nombre        Apellido        Telefono       Localidad    Edad    Sexo\n\n");
+                        for(int i=0; i<tamClientes; i++)
+                        {
+                            if(listaClientes[i].estado == 1)
+                            {
+                                printf("%5d %15s %15s %15s %15s %7d %7c\n", listaClientes[i].id,
+                                                                    listaClientes[i].nombre,
+                                                                    listaClientes[i].apellido,
+                                                                    listaClientes[i].telefono,
+                                                                    listaClientes[i].localidad,
+                                                                    listaClientes[i].edad,
+                                                                    listaClientes[i].sexo);
+                            }
+                        }
+                        printf("\n");
+                        int idAssign;
+                        while(flag2)
+                        {
+                            int idDuenio = getInt("Reingrese ID duenio: ", "Error, reingrese ID duenio: ", 4);
+
+                            for(int i=0; i<tamClientes; i++)
+                            {
+                                if(idDuenio == listaClientes[i].id)
+                                {
+                                    flag2 = 0;
+                                    idAssign = idDuenio;
+                                    break;
+                                }
+                            }
+                        }
+                        listaMascotas[i].idDuenio = idAssign;
+                        break;
+                    case 8:
                         printf("Volviendo al Menu\n\n");
                         break;
                     default:
                         printf("Ingrese una opcion valida");
                         break;
                     }
-                }while(option != 7);
+                }while(option != 8);
 
                 break;
             }
@@ -692,4 +728,43 @@ void mostrarClientesPorCantidadDeMascotasYOrdenAlfabetico(eCliente listaClientes
         }
     }
 }
+/************************************** PUNTO 19 **************************************/
+void mostrarClientesConMascotasMismoSexo(eCliente listaClientes[], int tamClientes, eMascota listaMascotas[], int tamMascotas)
+{
+    printf("                      ***** LISTADO DE DUENIOS CON MASCOTAS DEL MISMO SEXO*****\n\n");
+    int i;
+    int j;
+    for(i=0; i<tamClientes; i++)
+    {
+        if(listaClientes[i].estado == 1)
+        {
+            printf("         Nombre        Apellido        Telefono       Localidad    Edad    Sexo\n");
+            printf("%15s %15s %15s %15s %7d %7c\n\n", listaClientes[i].nombre,
+                                                          listaClientes[i].apellido,
+                                                          listaClientes[i].telefono,
+                                                          listaClientes[i].localidad,
+                                                          listaClientes[i].edad,
+                                                          listaClientes[i].sexo);
+            printf("         Nombre  Tipo         Raza   Edad   Peso   Sexo\n");
 
+            for(j=0; j<tamMascotas-1; j++)
+            {
+                    if(listaMascotas[j].estado == 1 && listaMascotas[j+1].estado == 1 &&
+                       listaMascotas[j].idDuenio == listaClientes[i].id && listaMascotas[j+1].idDuenio == listaClientes[i].id &&
+                       listaMascotas[j].sexo == listaMascotas[j+1].sexo)
+                        {
+                        printf("%15s %5s %12s %6d %6.2f %6c\n", listaMascotas[j].nombre,
+                                                            listaMascotas[j].tipo,
+                                                            listaMascotas[j].raza,
+                                                            listaMascotas[j].edad,
+                                                            listaMascotas[j].peso,
+                                                            listaMascotas[j].sexo);
+                        }
+
+            }
+            printf("\n********************************************************************\n\n");
+        }
+
+    }
+    printf("\n");
+}

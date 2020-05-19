@@ -15,5 +15,6 @@ void mostrarMascotasMayoresDeTresAnios(eMascota listaMascotas[], int tamMascotas
 void mostrarMascotasPorTipoElegido(eMascota listaMascotas[], int tamMascotas, eCliente listaClientes[], int tamClientes);
 void mostrarClientesPorCantidadDeMascotas(eCliente listaClientes[], int tamClientes, eMascota listaMascotas[], int tamMascotas);
 void mostrarClientesPorCantidadDeMascotasYOrdenAlfabetico(eCliente listaClientes[], int tamClientes, eMascota listaMascotas[], int tamMascotas);
+void mostrarClientesConMascotasMismoSexo(eCliente listaClientes[], int tamClientes, eMascota listaMascotas[], int tamMascotas);
 
 #endif // CLIENTES_MASCOTAS_H_INCLUDED
