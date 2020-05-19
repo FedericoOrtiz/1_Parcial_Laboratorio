@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1589888921 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\clientes.c
+	"Clientes.h"
+
+1589888900 c:\users\fede\desktop\1° parcial lab\1° parcial lab\clientes.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Gets.h"
+
+1589888933 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Gets.h"
+	"Clientes_Mascotas.h"
+
+1589884080 c:\users\fede\desktop\1° parcial lab\1° parcial lab\clientes_mascotas.h
+	"Clientes.h"
+	"Mascotas.h"
+
+1589888648 c:\users\fede\desktop\1° parcial lab\1° parcial lab\mascotas.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Gets.h"
+
+1589884479 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\clientes_mascotas.c
+	"Clientes_Mascotas.h"
+	"Gets.h"
+
+1589882671 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\mascotas.c
+	"Mascotas.h"
+
+1589144590 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\validate.c
+	"Validate.h"
+
+1589144592 c:\users\fede\desktop\1° parcial lab\1° parcial lab\validate.h
+
+1589833296 c:\users\fede\desktop\1° parcial lab\1° parcial lab\gets.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1589841475 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\gets.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Gets.h"
+	"Validates.h"
+
+1589830735 c:\users\fede\desktop\1° parcial lab\1° parcial lab\validates.h
+
+1589842536 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\validates.c
+	"Validates.h"
+
+1589888703 source:c:\users\fede\desktop\1° parcial lab\1° parcial lab\raza.c
+
