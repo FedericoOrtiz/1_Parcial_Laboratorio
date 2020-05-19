@@ -3,12 +3,14 @@
 
 typedef struct
 {
-    char nombre[3];
-    char pais[3];
+    int id;
+    int idTipo; //1 perro 2 Gato 3 Raro
+    char nombre[15];
+    char pais[15];
 }eRaza;
 
-void inicializarRazas(eRaza listaRazas[], int tam);
 void hardcodearRazas(eRaza listaRazas[], int tam);
+void printR(eRaza listaRazas[], int tam);
 
 
 #endif // RAZA_H_INCLUDED

@@ -5,7 +5,7 @@
 
 void mostrarClientesConSusMascotas(eCliente listaClientes[], int tamClientes, eMascota listaMascotas[], int tamMascotas);
 void mostrarMascotas(eMascota listaMascotas[], int tamMascotas, eCliente listaClientes[], int tamClientes);
-void cargarMascotas(eMascota listaMascotas[], int tamMascotas, eCliente listaClientes[], int tamClientes, int proximoIdMascota);
+void cargarMascotas(eMascota listaMascotas[], int tamMascotas, eCliente listaClientes[], int tamClientes, int proximoIdMascota, eRaza listaRazas[], int tamRazas);
 void eliminarMascotas(eMascota listaMascotas[], int tamMascotas, eCliente listaClientes[], int tamClientes);
 void modificarMascotas(eMascota listaMascotas[], int tamMascotas, eCliente listaClientes[], int tamClientes);
 void eliminarClientes(eCliente listaClientes[], int tamClientes, eMascota listaMascotas[], int tamMascotas);

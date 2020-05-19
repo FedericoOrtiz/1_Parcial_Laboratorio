@@ -80,13 +80,15 @@ void mostrarClientesConSusMascotas(eCliente listaClientes[], int tamClientes, eM
 }
 
 /************************************** PUNTO 4 **************************************/
-void cargarMascotas(eMascota listaMascotas[], int tamMascotas, eCliente listaClientes[], int tamClientes, int proximoIdMascota)
+void cargarMascotas(eMascota listaMascotas[], int tamMascotas, eCliente listaClientes[], int tamClientes, int proximoIdMascota, eRaza listaRazas[], int tamRazas)
 {
     eMascota auxMascota;
+    int tipo;
     int index = buscarLibreMascotas(listaMascotas, tamMascotas);
     if(index != -1)
     {
         int flag = 1;
+        int raza = -1;
         auxMascota.id = proximoIdMascota;
 
         printf("        ***** CARGAR MASCOTA *****\n\n");
@@ -98,7 +100,61 @@ void cargarMascotas(eMascota listaMascotas[], int tamMascotas, eCliente listaCli
             getString("Ingrese tipo (Perro/Gato/Raro): ", "Error, ingrese tipo: ", auxMascota.tipo);
         }while((strcmp(auxMascota.tipo, "Perro") != 0) && (strcmp(auxMascota.tipo, "Gato") != 0) && (strcmp(auxMascota.tipo, "Raro") != 0));
 
-        getString("Ingrese raza: ", "Error, ingrese raza: ", auxMascota.raza);
+        if(strcmp(auxMascota.tipo, "Perro") == 0)
+        {
+            tipo = 1;
+        }
+        else if(strcmp(auxMascota.tipo, "Gato") == 0)
+        {
+            tipo = 2;
+        }
+        else if(strcmp(auxMascota.tipo, "Raro") == 0)
+        {
+            tipo = 3;
+        }
+
+
+            for(int i=0; i<tamRazas; i++)
+            {
+                switch(tipo)
+                {
+                case 1:
+                    if(listaRazas[i].idTipo == 1)
+                    {
+                        printf("%d. %s -- %s\n", i,listaRazas[i].nombre, listaRazas[i].pais);
+                    }
+                    break;
+                case 2:
+                    if(listaRazas[i].idTipo == 2)
+                    {
+                        printf("%d. %s -- %s\n",  i,listaRazas[i].nombre, listaRazas[i].pais);
+                    }
+                    break;
+                case 3:
+                    if(listaRazas[i].idTipo == 3)
+                    {
+                        printf("%d. %s -- %s\n",  i,listaRazas[i].nombre, listaRazas[i].pais);
+                    }
+                    break;
+                }
+            }
+
+
+
+        while(raza>9 || raza<0)
+        {
+            raza = getInt("Ingrese ID raza: ", "Error, ingrese ID raza", 2);
+        }
+
+        for(int i=0; i<tamRazas; i++)
+        {
+            if(raza == listaRazas[i].id)
+            {
+                strcpy(auxMascota.raza, listaRazas[i].nombre);
+                break;
+            }
+        }
+
         auxMascota.edad = getInt("Ingrese edad: ", "Error, ingrese edad: ", 3);
         auxMascota.peso = getFloat("Ingrese peso: ");
 

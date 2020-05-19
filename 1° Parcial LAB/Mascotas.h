@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "Raza.h"
 #include "Gets.h"
 
 typedef struct
@@ -16,6 +17,7 @@ typedef struct
     float peso;
     char sexo;
     int estado;
+    int idRaza;
 }eMascota;
 
 void inicializarMascotas(eMascota listaMascotas[], int tam);

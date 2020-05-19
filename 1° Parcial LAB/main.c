@@ -4,7 +4,7 @@
 #include "Clientes_Mascotas.h"
 #define TAM_C 10
 #define TAM_M 20
-#define TAM_R 10
+#define TAM_R 9
 
 
 
@@ -19,6 +19,7 @@ int main()
 
     inicializarClientes(listaClientes, TAM_C);
     inicializarMascotas(listaMascotas, TAM_M);
+    hardcodearRazas(listaRazas, TAM_R);
     hardcodearClientes(listaClientes, TAM_C);
     hardcodearMascotas(listaMascotas, TAM_M);
 
@@ -58,7 +59,7 @@ int main()
                 mostrarClientesConSusMascotas(listaClientes, TAM_C, listaMascotas, TAM_M);
                 break;
             case 4:
-                cargarMascotas(listaMascotas, TAM_M, listaClientes, TAM_C, proximoIdMascota);
+                cargarMascotas(listaMascotas, TAM_M, listaClientes, TAM_C, proximoIdMascota, listaRazas, TAM_R);
                 proximoIdMascota++;
                 break;
             case 5:

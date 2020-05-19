@@ -47,6 +47,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Mascotas.h" />
+		<Unit filename="Raza.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Raza.h" />
 		<Unit filename="Validates.c">
 			<Option compilerVar="CC" />
 		</Unit>
